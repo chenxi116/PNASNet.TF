@@ -5,8 +5,7 @@ TensorFlow implementation of [PNASNet-5](https://arxiv.org/abs/1712.00559). Whil
 ## Requirements
 
 - TensorFlow 1.8.0
-- PyTorch 0.4.0
-- torchvision 0.2.1
+- torchvision 0.2.1 (for dataset loading)
 
 ## Data and Model Preparation
 

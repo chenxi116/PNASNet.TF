@@ -1,7 +1,5 @@
-import pdb
 import argparse
 
-import torch
 import torchvision.datasets as datasets
 import tensorflow as tf
 from utils import preprocess_for_eval
