@@ -26,6 +26,7 @@ import tensorflow as tf
 
 import nasnet
 import nasnet_utils
+from cell import PNASCell as PNasNetNormalCell2
 
 arg_scope = tf.contrib.framework.arg_scope
 slim = tf.contrib.slim
@@ -155,7 +156,7 @@ def build_pnasnet_large(images,
   # of stem cells (two by default).
   total_num_cells = hparams.num_cells + 2
 
-  normal_cell = PNasNetNormalCell(hparams.num_conv_filters,
+  normal_cell = PNasNetNormalCell2(hparams.num_conv_filters,
                                   hparams.drop_path_keep_prob, total_num_cells,
                                   hparams.total_training_steps)
   with arg_scope(
