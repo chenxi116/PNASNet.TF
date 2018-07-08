@@ -30,7 +30,7 @@ If you use the code, please cite:
 
 ## Data and Model Preparation
 
-- Download the ImageNet validation set and move images to labeled subfolders. Todo this, you can use [this script](https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh). Make sure the folder `val` is under `data/`.
+- Download the ImageNet validation set and move images to labeled subfolders. To do the latter, you can use [this script](https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh). Make sure the folder `val` is under `data/`.
 - Download the `PNASNet-5_Large_331` pretrained model:
 ```bash
 cd data
