@@ -2,6 +2,8 @@
 
 TensorFlow implementation of [PNASNet-5](https://arxiv.org/abs/1712.00559). While completely compatible with the [official implementation](https://github.com/tensorflow/models/blob/master/research/slim/nets/nasnet/pnasnet.py), this implementation focuses on simplicity and inference.
 
+In particular, three files of 1200 lines in total (`nasnet.py`, `nasnet_utils.py`, `pnasnet.py`) are refactored into two files of 400 lines in total (`cell.py`, `pnasnet.py`). This code no longer supports `NCHW` data format, primarily because the released model was trained with `NHWC`. I tried to keep the rough structure and functionality of the official implementation when simplifying the code.
+
 ## Requirements
 
 - TensorFlow 1.8.0
