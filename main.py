@@ -1,4 +1,6 @@
 import argparse
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 import torchvision.datasets as datasets
 import tensorflow as tf
@@ -23,7 +25,9 @@ def main():
   with slim.arg_scope(pnasnet_large_arg_scope()):
     logits, _ = build_pnasnet_large(images, num_classes=1001, is_training=False)
 
-  sess = tf.Session()
+  config = tf.ConfigProto()
+  config.gpu_options.allow_growth = True
+  sess = tf.Session(config=config)
   ckpt_restorer = tf.train.Saver()
   ckpt_restorer.restore(sess, 'data/model.ckpt')
 
